@@ -1,0 +1,11 @@
+FROM openjdk:11
+VOLUME /tmp
+#ARG target/*.jar app.jar
+#COPY ${JAR_FILE} app.jar
+COPY target/*.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
+#EXPOSE 8082:8082
+
+## Comandos
+## docker build --build-arg JAR_FILE=target/*.jar -t profissionalinfo .
+## docker run -p 8082:8082 profissionalinfo
