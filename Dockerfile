@@ -1,5 +1,3 @@
 FROM openjdk:11
-VOLUME /tmp
-ARG JAR_FILE
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+COPY target/*.jar /app.jar
+CMD ["java", "-jar", "app.jar"]

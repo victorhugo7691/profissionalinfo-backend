@@ -9,3 +9,10 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 ## Comandos
 ## docker build --build-arg JAR_FILE=target/*.jar -t profissionalinfo .
 ## docker run -p 8082:8082 profissionalinfo
+------------------------------------------------------------
+docker build -t <nome_do_app> .
+
+docker run <id_da_image>
+
+Vincular a porta do docker com o host
+docker run -p <portaHost>:<portaContainer> <id_da_imagem>
